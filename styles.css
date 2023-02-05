@@ -1,0 +1,212 @@
+body {
+    background-color: #e0e0e6;
+    color: #54595f;
+    font-family: 'Mulish';
+    font-size: 17px;
+}
+
+div {
+    /* border: 1px dashed rgb(197, 29, 144); */
+}
+
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.side-info {
+    max-width: 300px;
+    margin: 0 5px 0 10px;
+    background-color: rgb(205, 203, 203);
+    
+}
+
+.photo,
+.personal-info,
+.languages,
+.contact,
+.education,
+.courses,
+.work-experience,
+.hard-skills,
+.soft-skills {
+    padding: 10px;
+}
+
+.photo {
+    text-align: center;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.photo .name {
+    font-weight: 800;
+    color: black;
+}
+
+.photo img {
+    height: 150px;
+    border-radius: 50%;
+}
+.side-scroll {
+     overflow-y: scroll;
+     height: calc(100vh - 213px - 74px) ;
+}
+
+.personal-info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 0 5px;
+    overflow-y: scroll;
+}
+
+.contact {
+    text-align: center;
+}
+
+
+
+.contact span a {
+    text-decoration: none;
+
+}
+
+
+
+
+
+.education {
+    /* background: yellow; */
+    min-width: 200px;
+    /* height: 350px; */
+}
+
+.education ul {
+    list-style: square;
+}
+
+.education h2 {
+    text-align: center;
+}
+
+.edu-item {}
+
+.courses {
+    /* background: palegreen; */
+    min-width: 250px;
+    /* height: 100px; */
+
+}
+
+.courses ul {
+    list-style: square;
+}
+
+.courses h2 {
+    text-align: center;
+}
+
+.languages {
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="language"] {
+    --size: 4rem;
+    --fg: #369;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="language"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+
+
+.work-experience {
+    /* background: firebrick; */
+    /* width: 70%; */
+    /* height: 350px; */
+}
+
+.work-experience h2 {
+    text-align: center;
+}
+
+.work-experience ul {
+    list-style: square;
+}
+
+.work-item {}
+
+.hard-skills {
+    /* background: sandybrown; */
+    min-width: 300px;
+    /* height: 200px; */
+
+}
+
+.hard-skills ul {
+    list-style: square;
+}
+
+.hard-skills h2 {
+    text-align: center;
+}
+
+.soft-skills {
+    /* background: sandybrown; */
+    min-width: 300px;
+    /* height: 200px; */
+}
+
+.soft-skills ul {
+    list-style: square;
+}
+
+.soft-skills h2 {
+    text-align: center;
+}
+
+/* ============= common styles ========================= */
+
+.block-item {
+    padding: 10px;
+    background-color: rgb(235, 231, 231);
+    margin: 20px;
+}
