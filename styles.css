@@ -59,6 +59,7 @@ div {
 .personal-info div {
     display: flex;
     justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .main {
@@ -176,17 +177,25 @@ div {
 
 .hard-skills {
     /* background: sandybrown; */
-    min-width: 300px;
+    /* min-width: 300px; */
     /* height: 200px; */
 
 }
 
 .hard-skills ul {
-    list-style: square;
+    list-style: none;
+    display: list-item;
+    padding: 10px;
+    
+    
+}
+.hard-skills ul li {
+    font-size: 15px;
+
 }
 
 .hard-skills h2 {
-    text-align: center;
+   /* text-align: center; */
 }
 
 .soft-skills {
@@ -209,4 +218,5 @@ div {
     padding: 10px;
     background-color: rgb(235, 231, 231);
     margin: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
